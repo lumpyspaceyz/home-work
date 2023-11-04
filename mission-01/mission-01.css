@@ -1,0 +1,94 @@
+body,
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+/* 버튼 디자인 초기화 */
+button {
+  border: 0 none;
+  background: transparent;
+}
+
+/* 전체 박스 - flex row */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px;
+}
+
+/* 폭이 좁은 상품 - flex column */
+.card-normal {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상품 - 핸드크림 이미지 사이즈 조절 */
+.hand {
+  width: 243px;
+}
+
+.card {
+  padding: 5px;
+  position: relative;
+}
+
+/* 활성화 상태의 긴버튼 가상요소 */
+.is-active .product-btn::before {
+  position: absolute;
+  content: "";
+  left: 31px;
+  bottom: 30px;
+  width: 112px;
+  height: 42px;
+  background: url(images/button-active.png) no-repeat;
+}
+
+/* 활성화 상태의 작은버튼 가상요소 */
+.is-active .product-btn::after {
+  position: absolute;
+  content: "";
+  left: 31px;
+  bottom: 30px;
+  width: 112px;
+  height: 42px;
+  display: block;
+}
+
+/* 활성화 된 작은버튼 가상요소에 마우스가 올라갔을 때 */
+.is-active .product-btn:hover::after {
+  content: "";
+  border: 1px solid #ccc;
+}
+
+/* 비활성화 된 작은버튼 가상요소 */
+.product-btn::after {
+  position: absolute;
+  content: "";
+  left: 31px;
+  bottom: 30px;
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+/* 비활성화 된 작은버튼 가상요소에 마우스가 올라갔을 때 */
+.product-btn:hover::after {
+  content: "";
+  border: 1px solid #0074e9;
+}
+
+/* 폭이 넓은 상품 - flex column */
+.card-wide {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상품 - 꿀생강차 이미지 사이즈 조절 */
+.honey {
+  width: 502px;
+}

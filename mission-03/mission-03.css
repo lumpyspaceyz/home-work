@@ -1,0 +1,86 @@
+body,
+body *,
+body *::before,
+body *::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg {
+  background: url(./images/background.png) no-repeat 50% 0 / cover;
+}
+
+.header {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7)
+    )
+    no-repeat 50% 0 / cover;
+  padding: 40px 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.login-wrapper {
+  position: relative;
+}
+
+.lang::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: url(./images/Icon/global.png) no-repeat 0 50%;
+}
+
+.lang {
+  background: url(./images/bi_caret-down-fill.png) no-repeat 95% 50%;
+  border-radius: 2px;
+  border: 1px solid #757575;
+  appearance: none;
+  width: 113px;
+  height: 40px;
+  padding: 12px 10px;
+  /* display: flex;
+  align-items: center;
+  flex-shrink: 0; */
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2; /* 19.2px */
+}
+
+.login-btn {
+  border: none;
+  border-radius: 4px;
+  background: var(--red-500, #e50914);
+  width: 70px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 24px */
+  letter-spacing: -0.008px;
+}
+
+.main {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7)
+    )
+    no-repeat 50% 0 / cover;
+  height: 50vh;
+}
+
+.footer {
+  background-color: pink;
+}

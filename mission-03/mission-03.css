@@ -1,3 +1,10 @@
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 body,
 body *,
 body *::before,
@@ -8,6 +15,10 @@ body *::after {
 
 .bg {
   background: url(./images/background.png) no-repeat 50% 0 / cover;
+}
+
+.bg > * {
+  width: clamp(460px, 100%, 100%);
 }
 
 .header {
@@ -23,16 +34,6 @@ body *::after {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-}
-
-/* 모바일 */
-@media (max-width: 768px) {
-  .header {
-    padding: 20px 25px;
-  }
-  .logo {
-    margin-right: 56px;
-  }
 }
 
 .login-wrapper {
@@ -75,6 +76,16 @@ body *::after {
   letter-spacing: -0.008px;
 }
 
+/* 모바일 */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 25px;
+  }
+  .logo {
+    margin-right: 56px;
+  }
+}
+
 .main {
   background: linear-gradient(
       to top,
@@ -84,7 +95,6 @@ body *::after {
       rgba(0, 0, 0, 0.7)
     )
     no-repeat 50% 0 / cover;
-  /* height: 50vh; */
   color: #fff;
   display: flex;
   flex-flow: column nowrap;
@@ -203,7 +213,102 @@ body *::after {
   }
 }
 
+.divider {
+  background: #2f2f2f;
+  height: 4px;
+}
+
 .footer {
-  background-color: #000;
-  height: 50vh;
+  background: #010101;
+  color: #acacac;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.footer-inner {
+  padding: 50px 200px;
+  display: grid;
+  row-gap: 60px;
+}
+
+.cs-call {
+  color: #c8c8c8;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5; /* 30px */
+  letter-spacing: -0.01px;
+}
+
+.guide-link {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2; /* 19.2px */
+  width: clamp(600px, 80%, 999px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 20px;
+}
+
+.footer-lang {
+  position: relative;
+}
+
+.footer-lang .lang-img {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+.footer-lang .lang {
+  background: url(./images/bi_caret-down-fill.png) no-repeat 95% 50%;
+  border-radius: 2px;
+  border: 1px solid #757575;
+  appearance: none;
+  width: 113px;
+  padding: 12px 35px;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2; /* 19.2px */
+}
+
+.company {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2; /* 26.4px */
+  padding-bottom: 20px;
+}
+
+.address {
+  font-style: normal;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+  align-items: start;
+  column-gap: 15px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .footer {
+    align-items: center;
+  }
+
+  .footer-inner {
+    width: 325px;
+    padding: 40px 25px;
+  }
+
+  .cs-call-number {
+    display: block;
+  }
+
+  .guide-link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    width: 325px;
+  }
 }

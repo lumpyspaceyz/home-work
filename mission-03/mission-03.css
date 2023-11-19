@@ -25,18 +25,28 @@ body *::after {
   justify-content: space-between;
 }
 
-.login-wrapper {
-  position: relative;
+/* 모바일 */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 25px;
+  }
+  .logo {
+    margin-right: 56px;
+  }
 }
 
-.lang::before {
-  content: "";
+.login-wrapper {
+  position: relative;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 25px;
+}
+
+.lang-img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  background: url(./images/Icon/global.png) no-repeat 0 50%;
+  left: 10px;
+  top: 12px;
 }
 
 .lang {
@@ -45,11 +55,7 @@ body *::after {
   border: 1px solid #757575;
   appearance: none;
   width: 113px;
-  height: 40px;
-  padding: 12px 10px;
-  /* display: flex;
-  align-items: center;
-  flex-shrink: 0; */
+  padding: 12px 35px;
   color: #757575;
   font-size: 14px;
   font-weight: 400;
@@ -78,9 +84,126 @@ body *::after {
       rgba(0, 0, 0, 0.7)
     )
     no-repeat 50% 0 / cover;
-  height: 50vh;
+  /* height: 50vh; */
+  color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 28px;
+  padding: 57px 240.5px;
+}
+
+.headline {
+  width: 518px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2; /* 72px */
+  letter-spacing: -0.03px;
+}
+
+.paragraph1 {
+  text-align: justify;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5; /* 30px */
+  letter-spacing: -0.01px;
+}
+
+.paragraph2 {
+  width: 306px;
+  text-align: justify;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 24px */
+  letter-spacing: -0.008px;
+}
+
+.email-form {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-input {
+  width: 540px;
+  height: 60px;
+  padding: 18px 20px;
+  color: #757575;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+  letter-spacing: -0.008px;
+}
+
+.form-btn {
+  width: 210px;
+  height: 60px;
+  padding: 15px 20px;
+  background: #e50914;
+  border: none;
+  color: #fff;
+  text-align: justify;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2; /* 26.4px */
+  background-image: url(./images/Button/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 89% 50%;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .main {
+    padding: 20px 18px;
+  }
+  .headline {
+    width: 310px;
+    text-align: center;
+
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.2; /* 40.8px */
+  }
+  .paragraph1 {
+    width: 259px;
+    text-align: center;
+  }
+  .paragraph2 {
+    text-align: center;
+  }
+  .email-form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .form-input {
+    width: 245px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 10px 20px 9px 20px;
+    border: none;
+  }
+  .form-btn {
+    height: 40px;
+    padding: 15px 20px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1; /* 21px */
+    letter-spacing: -0.007px;
+  }
+
+  .paragraph2 {
+    font-weight: 400;
+  }
 }
 
 .footer {
-  background-color: pink;
+  background-color: #000;
+  height: 50vh;
 }
